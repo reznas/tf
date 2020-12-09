@@ -1,0 +1,78 @@
+#%RAML 1.0 Library
+
+types:
+
+  AddressSearchRequestFromSoft:
+    type: object
+    properties:
+      address_name: string
+      address_place: string
+      district: string
+      muncipality: string
+      pagination:
+        type: object
+        properties:
+          start_row: integer
+          rows_per_page: integer
+    examples:
+      output: !include examples/AddressSearchRequestFromSoft.json
+
+  AddressSearchResultToSoft:
+    type: object
+    properties:
+      address_place_id: string
+      address_name: string
+      address_place: string
+      muncipality: string
+      district: string
+      formal_address_name: string
+      formal_address_place: string
+      formal_address_place_id: string
+    examples:
+      output: !include examples/AddressSearchResultToSoft.json
+
+  AddressSearchRequestToSamplan:
+    type: object
+    properties:
+      address_name: string
+      address_place: string
+      district: string
+      muncipality: string
+      pagination:
+        type: object
+        properties:
+          start_row: integer
+          rows_per_page: integer
+    examples:
+      output: !include examples/AddressSearchRequestToSamplan.json
+
+  AddressSearchResultFromSamplan:
+    type: object
+    properties:
+      editedrow: string
+      addresnameid: number
+      addressplaceid: number
+      addressname: string
+      addressname23: string
+      addressplace: string
+      locationname: string
+      locationname14: string
+      locationnameroot: string
+      locationnameroot14: string
+      locationnamealt: string
+      communityshortcode: string
+      communityname: string
+      addresscategory: string
+      idzone: number
+      xcoordinate: number
+      ycoordinate: number
+      formaladdressplaceid: number
+      formaladdressname: string
+      formaladdressname23: string
+      formaladdressplace: string
+      formalidzone: number
+      formalxcoordinate: number
+      formalycoordinate: number
+      directionid: number
+    examples:
+      output: !include examples/AddressSearchResultFromSamplan.json

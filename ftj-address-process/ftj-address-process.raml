@@ -1,0 +1,38 @@
+#%RAML 1.0
+title: ftj-address-process
+version: v1
+baseUri: icc.sl.se/ftj-address/{version}
+description: FTJ Address API
+
+uses:
+  address: exchange_modules/e05757d9-f5e6-467e-bd34-d3e34ade127c/address-types/1.0.7/address-types.raml
+
+traits:
+  secured:
+    queryParameters:
+      client_id:
+        description: Client application identifier
+        type: string
+      client_secret:
+        description: Client application secret associated with the client id
+        type: string
+
+/addresses:
+  get:
+    is: [secured]
+    description: Get information about address and place from SAMPLAN
+    displayName: RESEADRESS(S2) GET /addresses
+    queryParameters:
+      address_name:
+        type: string
+        minLength: 3
+      address_place?: string
+      district?: string
+      municipality?: string
+      start_row?: integer
+      rows_per_page?: integer
+    responses:
+      200:
+        body:
+          application/json:
+            type: address.AddressSearchResultFromSamplan

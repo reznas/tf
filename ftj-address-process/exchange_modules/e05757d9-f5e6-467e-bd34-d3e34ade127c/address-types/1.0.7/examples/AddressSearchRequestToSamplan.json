@@ -1,0 +1,10 @@
+{
+  "address_name": "Lindhagensgatan",
+  "address_place": "100",
+  "district": "Stadshagen",
+  "muncipality": "Stockholm",
+  "pagination": {
+    "start_row": 0,
+    "rows_per_page": 20
+  }
+}

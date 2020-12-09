@@ -1,0 +1,10 @@
+{
+  "address_place_id": "address_place_id",
+  "address_name": "address_name",
+  "address_place": "address_place",
+  "muncipality": "muncipality",
+  "district": "district",
+  "formal_address_name": "formal_address_name",
+  "formal_address_place": "formal_address_place",
+  "formal_address_place_id": "formal_address_place_id"
+}
